@@ -1,0 +1,17 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1c1c;
+}
+
+/* .activity{
+  margin-left: 50px;
+
+}
+
+.navbar{
+  padding-right: 150px;
+} */

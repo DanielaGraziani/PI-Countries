@@ -19,10 +19,10 @@ router.get("/", async (req, res) => {
         return {
           id: c.cca3,
           name: c.name.common,
-          flag: c.flags[0],
+          flag: c.flags[1],
           region: c.region,
-          capital: c.capital || "undefined",
-          subregion: c.subregion,
+          capital: c.capital ? c.capital[0] : 'Undefined',
+          subregion: c.subregion || 'Undefined',
           area: c.area,
           population: c.population,
         };
@@ -76,9 +76,10 @@ router.get("/:id", async (req, res) => {
     let countryID = await Country.findByPk(id, {
       include: Activity,
     });
+    
     // 3. retorno la coincidencia
     countryID
-      ? res.status(200).json(countryID)
+      ? res.status(200).send(countryID)
       : res.status(404).send("The country is not found");
   } catch (error) {
     console.log(error);

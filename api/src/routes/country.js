@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
           id: c.cca3,
           name: c.name.common,
           flag: c.flags[1],
-          region: c.region,
+          continent: c.continents[0],
           capital: c.capital ? c.capital[0] : 'Undefined',
           subregion: c.subregion || 'Undefined',
           area: c.area,

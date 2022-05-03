@@ -25,7 +25,7 @@ export default function Cards({currentCountries}) {
         return (
         //  <div>
             <Link key={c.id} to={`/countries/${c.id}`} className={s.link}>
-              <Card name={c.name} region={c.region} flag={c.flag} />
+              <Card name={c.name} region={c.continent} flag={c.flag} />
             </Link>
           // </div>
         );

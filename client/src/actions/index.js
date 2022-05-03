@@ -1,4 +1,4 @@
-import { GET_ALL_COUNTRIES, GET_COUNTRIES_BY_ID, GET_COUNTRY_BY_SEARCH } from "./types";
+import { GET_ALL_COUNTRIES, GET_COUNTRIES_BY_ID, GET_COUNTRY_BY_SEARCH, FILTER_CONTINENTS } from "./types";
 
 
 
@@ -30,3 +30,10 @@ export const getCountryBySearch = (search) => (dispatch) => {
       dispatch({ type: GET_COUNTRY_BY_SEARCH, payload: json });
     });
   };
+
+  export const filterContinents = (payload) =>{
+    return {
+      type: FILTER_CONTINENTS,
+      payload
+    }
+  }

@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
     <div className="App">
     <Route path="/countries" component={NavBar}/>
-    <Route exact path="/countries/:id" component={CardsDetails} />
     <Route exact path="/countries" component={Home}/>
+    <Route exact path="/countries/:id" component={CardsDetails} />
     <Route exact path="/" component={LandingPage}/>
     </div>
     </BrowserRouter>

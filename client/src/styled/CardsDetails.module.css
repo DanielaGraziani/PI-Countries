@@ -3,27 +3,38 @@
     justify-content: center;
     flex-wrap: wrap;
     text-align:justify;
-    margin-top: 50px;
+    margin-top: 100px;
+     background-repeat: no-repeat;
+    background-image: cover;
+    background-image: url(../assets/imageWorld.png);  
+    
   }
-  
+
+  /* body{
+    background-image: url(../assets/imageWorld.png); 
+    background-repeat: no-repeat;
+    
+  } */
+
   .col {
     max-width: 500px;
-    margin: 15px;
+    margin: 35px;
     height: auto;
-    height: 80%;
+    height: 100%;
+    /* border: 2px solid white; */
   }
   
   .cardImage {
-    border-radius: 15px;
-    width: 200px;
-    height:200px;
+    border-radius: 50px 0px;
+    width: 320px;
+    height:220px;
     border: 2px solid white
   }
   
-  .cardDetails {
+  /* .cardDetails {
     font-size: 1.2rem;
   }
-  
+   */
   .title {
     margin-top: 0;
   }
@@ -32,3 +43,29 @@
     width: 500px;
   }
   
+  .titleAct{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20x;
+    font-weight: bolder;
+
+  }
+
+  .titleActDiv{
+    margin-top: 10px;
+  }
+
+  .name{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .description{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bolder;
+   line-height: 29px ;
+   
+  }

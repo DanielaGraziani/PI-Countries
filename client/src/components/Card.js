@@ -11,10 +11,10 @@ export default function Card({ name, region, flag }) {
           <img src={flag} className={s.cardImg} alt="not found" />
         </div>
         <div className={s.name}>
-          <h2>{name}</h2>
+          <h3>{name}</h3>
         </div>
         <div className={s.region}>
-          <h3>{region}</h3>
+          <h5>{region}</h5>
         </div>
       </div>
     </div>

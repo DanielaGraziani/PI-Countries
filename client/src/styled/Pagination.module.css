@@ -18,7 +18,9 @@
 }
 
 .num {
-  background-color: #c0c0ee;
+  /* background-color: #DEB6AB; */
+  background-color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,5 +36,8 @@
 }
 
 .num:hover{
-    background-color: #4CAF50 ;
+    /* background-color: #AC7D88 ; */
+    background-color: #b1b1b13d;
+    color: white;
+    
 }

@@ -4,13 +4,13 @@ import s from '../styled/Pagination.module.css'
 export default function Pagination({
   allCountries,
   pagination,
-  countriesPerPage,
+  // countriesPerPage,
 }) {
   const pageNumbers = [];
 
 
-  for (let i = 1; i < Math.ceil(allCountries / countriesPerPage ); i++) {  
-    pageNumbers.push(i);
+  for (let i =0; i < Math.ceil(allCountries / 10 ); i++) {  
+    pageNumbers.push(i+1);
   }
 
     

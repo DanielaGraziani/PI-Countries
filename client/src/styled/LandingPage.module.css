@@ -1,30 +1,37 @@
 
 
 .landingContainer{
-  background-image: url('../assets/Maxresdefault-2.jpg');
+  background-image: url('../assets/imageWorld.png');
+  /* background-image: url(../assets/3990288.jpg); */
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-repeat: repeat;
    width:100vw;
   height: 100vh; 
+  background-color: #0F0F0F;
 }
 
 
 .landingTitle {
   padding: 60px;
   font-size: 4rem;
-  color: white;
+  color: yellow;
   margin-right: 450px;
   -webkit-text-stroke: 4px black;
+  
 }
 
 .text {
-  padding-left: 100px;
+  /* padding-left: 100px;
   padding-bottom: 50px;
-  width: 650px;
-  font-size: 2.1rem;
+  width: 650px; */
+  font-size: 3rem;
   font-weight: bold;
   text-align:center;
+  color: yellow;
+  -webkit-text-stroke: 3px black;
+ 
+  
 }
 
 .landingButton {
@@ -44,8 +51,8 @@
 }
 
 .buttonContainer{
-padding-top: 10px;
-margin-right: 450px;
+padding-top: 90px;
+/* margin-right: 450px; */
 margin-bottom: auto;
 
 }

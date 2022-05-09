@@ -1,22 +1,27 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { getCountriesByID } from "../actions";
-// import {Link} from 'react-router-dom'
+import { getCountriesByID, resetDetail } from "../actions";
 import s from "../styled/CardsDetails.module.css";
+import Activity from '../components/Activity'
 
-export default function CardsDetails(props) {;
+
+
+export default function CardsDetails(props) {
   const dispatch = useDispatch();
   const countryDetails = useSelector((state) => state.country);
-  
-  // let {id} = useParams()
 
   useEffect(() => {
+    // dispatch(resetDetail())
     dispatch(getCountriesByID(props.match.params.id));
+    return ()=>{
+      dispatch(resetDetail())
+    }
   }, [dispatch, props.match.params.id]);
 
+
   return (
+    <div className={s.content}>
     <div className={s.detailsContainer}>
       <img
         className={`${s.col} ${s.cardImage}`}
@@ -24,32 +29,32 @@ export default function CardsDetails(props) {;
         alt="Flag"
       />
       <div className={`${s.col} ${s.cardDetails}`}>
-        <h2>{countryDetails.name}</h2>
-        <h3>Code: {countryDetails.id}</h3>
-        <h3>Capital: {countryDetails.capital}</h3>
-        <h3>Region: {countryDetails.region}</h3>
-        <h3>Subregion: {countryDetails.subregion}</h3>
-        <h3> Population: {countryDetails.population} habitants</h3>
-        <h3>Area: {countryDetails.area} km2</h3>
+        <p className={s.name}>{countryDetails.name}</p>
+        <p className={s.description}>Capital: {countryDetails.capital}</p>
+        <p className={s.description}>Region: {countryDetails.continent}</p>
+        <p className={s.description}>Subregion: {countryDetails.subregion}</p>
+        <p className={s.description}> Population: {countryDetails.population} habitants</p>
+        <p className={s.description}>Area: {countryDetails.area} km2</p>
+        <p className={s.description}>Code: {countryDetails.id}</p>
       </div>
 
-      <div className={s.activitiesDetails}>
-        {countryDetails.activities?.map((el) => {
-          return (
-            <div>
-              <Link to={"/activity"} className={s.linkDetails}>
-                <h2>Activity</h2>
-              </Link>
-              <div>
-                <h3>{el.name}</h3>
-                <h3>Difficulty: {el.difficulty}</h3>
-                <h3>Duration: {el.duration}</h3>
-                <h3>Season: {el.season}</h3>
-              </div>
-            </div>
-          );
-        })}
+      <div>
+        {countryDetails.activities?.length > 0 ? (
+          countryDetails.activities?.map((activity, index) => (
+            <Activity
+              key={index}
+              name={activity.name}
+              difficulty={activity.difficulty}
+              duration={activity.duration}
+              season={activity.season}
+            />
+          ))
+        ) : (
+          <div className={s.titleActDiv}>
+          <p className={s.titleAct}>Activities not found</p></div>
+        )}
       </div>
+    </div>
     </div>
   );
 }

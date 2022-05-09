@@ -1,0 +1,66 @@
+/* .home {
+  background-image: url(../assets/Papel\ Pintado\ Mapamundi\ en\ Tonos\ Neutros\ _\ Hovia\ ES.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.home{
+  background-image: url(../assets/imageWorld.png);
+} 
+
+h3{
+    color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterContainer {
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.orderContainer {
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+.sOrder {
+  background: transparent; 
+  /* border: none; */
+  font-size: 16px;
+  height: 30px;
+  padding: 5px;
+  width: 200px;
+  background-color: #0F0F0F;
+  color: white;
+  border: 2px solid white;
+
+  
+}
+
+.sFilter {
+  background: transparent;
+  /* border: none; */
+  font-size: 16px;
+  height: 30px;
+  padding: 5px;
+  width: 200px;
+  background-color: #0F0F0F;
+  color: white;
+  border: 2px solid white;
+  
+}
+
+.sFilter:focus {
+  outline: none;
+}
+.sOrder:focus {
+  outline: none;
+}
+
+.cont{
+    color:white;
+}

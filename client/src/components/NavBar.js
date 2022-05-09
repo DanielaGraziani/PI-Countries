@@ -9,10 +9,18 @@ export default function NavBar() {
     <div className={s.navBarContainer}>
       
       <nav className={s.navbar}>
-          <Link to="/countries">Home</Link>
-        <SearchBar /> 
-        <div className={s.activity}>
-          <Link to="/activity">Create Activity</Link>
+
+        <div>
+        <button className={s.home}>
+          <Link className={s.link} to="/countries">Home</Link>
+        </button>
+        </div>
+        {/* <SearchBar />  */}
+
+        <div>
+          <button className={s.act}>
+          <Link className={s.link} to="/activity">Create Activity</Link>
+          </button>
         </div>
       </nav>
 

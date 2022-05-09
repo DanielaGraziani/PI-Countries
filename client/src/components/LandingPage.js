@@ -9,9 +9,9 @@ export default function LandingPage() {
 
   return (
     <div className={s.landingContainer}>
-      <h1 className={s.landingTitle}>Yakko's World</h1>
+      <h1 className={s.landingTitle}>Countries App</h1>
      <div className={s.text}>
-      <p>Have fun with Yakko getting to know countries and activities</p>
+      <p>Welcome to this experience</p>
      </div>
         <div className={s.buttonContainer}>
         

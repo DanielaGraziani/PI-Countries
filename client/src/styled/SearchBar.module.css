@@ -6,6 +6,7 @@
 
 .searchBox{
     position: relative;
+    margin-top: 50px;
 }
 
 .searchButton{
@@ -25,12 +26,12 @@
     padding: 5px 30px 5px 10px ;
     margin-left: 50px;
     border: 0;
-
+    width: 600px;
 
 }
 
 .searchInput:focus{
     outline: none;
-    border: 1px solid rgb(175, 38, 38);
+    border: 1px solid rgb(158, 151, 151);
     box-shadow: 0 0 5px #f0eaed;
 }
